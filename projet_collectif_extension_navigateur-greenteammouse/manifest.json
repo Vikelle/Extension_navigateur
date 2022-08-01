@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Modérateur",
+    "description": "Vérification vocabulaire utilisé",
+    "version": "1.0",
+    
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
+
+    "action": {
+        "default_incon": "images/icon.jpg",
+        "defaul_popup": "popup.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                 "<all_urls>",
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "js/search.js"
+            ],
+            "css": [
+                "css/style.css"
+            ]
+        }
+    ]
+}
